@@ -1,11 +1,11 @@
-function Book({ data: { title, subtitle, author, publisher, description } }) {
+function Book({ data: { isbn, title, subtitle, author, publisher, description } }) {
 
     return (
-        <div className="card">
+        <div className="card" id={isbn}>
             <h5 className="card-header">{title}</h5>
             <div className="card-body">
                 <h5>{subtitle}</h5>
-                <p className="card-text">
+                <div className="card-text">
                     <table className="table">
                         <tbody>
                             <tr>
@@ -30,7 +30,7 @@ function Book({ data: { title, subtitle, author, publisher, description } }) {
                             </tr>
                         </tbody>
                     </table>
-                </p>
+                </div>
             </div>
         </div>
 
@@ -38,4 +38,3 @@ function Book({ data: { title, subtitle, author, publisher, description } }) {
 }
 
 export default Book
-
